@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Damage Calculator</title>
+    
+</head>
+<body>
+    
+    <form id="damageCalculator">
+        <label for="manaAvailable">Mana Available:</label>
+        <input type="number" id="manaAvailable"><br><br>
+
+        <label for="innervatesCoins">Innervates/Coins Available:</label>
+        <input type="number" id="innervatesCoins"><br><br>
+
+        <label for="minionsDead">Minions Dead:</label>
+        <input type="number" id="minionsDead"><br><br>
+
+        <label for="enemyHP">Enemy HP:</label>
+        <input type="number" id="enemyHP"><br><br>
+
+        <label for="solarEclipse1">Solar Eclipse 1:</label>
+        <input type="number" id="solarEclipse1"><br><br>
+
+        <label for="solarEclipse2">Solar Eclipse 2:</label>
+        <input type="number" id="solarEclipse2"><br><br>
+
+        <label for="solarEclipse3">Solar Eclipse 3:</label>
+        <input type="number" id="solarEclipse3"><br><br>
+
+        <label for="solarEclipse4">Solar Eclipse 4:</label>
+        <input type="number" id="solarEclipse4"><br><br>
+
+        <label for="moonbeam1">Moonbeam 1:</label>
+        <input type="number" id="moonbeam1"><br><br>
+
+        <label for="moonbeam2">Moonbeam 2:</label>
+        <input type="number" id="moonbeam2"><br><br>
+
+        <label for="moonbeam3">Moonbeam 3:</label>
+        <input type="number" id="moonbeam3"><br><br>
+
+        <label for="unendingSwarm1">Unending Swarm 1:</label>
+        <input type="number" id="unendingSwarm1"><br><br>
+
+        <label for="unendingSwarm2">Unending Swarm 2:</label>
+        <input type="number" id="unendingSwarm2"><br><br>
+
+        <button type="button" onclick="calculateDamage()">Calculate Damage</button>
+    </form>
+
+    <h2>Result:</h2>
+    <p id="damageResult"></p>
+
+    <script>
+        function calculateDamage() {
+            // Retrieve input values
+            const manaAvailable = parseFloat(document.getElementById('manaAvailable').value) || 0;
+            const innervatesCoins = parseFloat(document.getElementById('innervatesCoins').value) || 0;
+            const minionsDead = parseFloat(document.getElementById('minionsDead').value) || 0;
+            const enemyHP = parseFloat(document.getElementById('enemyHP').value) || 0;
+            const solarEclipse1 = parseFloat(document.getElementById('solarEclipse1').value) || 0;
+            const solarEclipse2 = parseFloat(document.getElementById('solarEclipse2').value) || 0;
+            const solarEclipse3 = parseFloat(document.getElementById('solarEclipse3').value) || 0;
+            const solarEclipse4 = parseFloat(document.getElementById('solarEclipse4').value) || 0;
+            const moonbeam1 = parseFloat(document.getElementById('moonbeam1').value) || 0;
+            const moonbeam2 = parseFloat(document.getElementById('moonbeam2').value) || 0;
+            const moonbeam3 = parseFloat(document.getElementById('moonbeam3').value) || 0;
+            const unendingSwarm1 = parseFloat(document.getElementById('unendingSwarm1').value) || 0;
+            const unendingSwarm2 = parseFloat(document.getElementById('unendingSwarm2').value) || 0;
+
+            // Calculate total damage (customize this calculation based on your requirements)
+            const totalDamage = (
+                solarEclipse1 + solarEclipse2 + solarEclipse3 + solarEclipse4 +
+                moonbeam1 + moonbeam2 + moonbeam3 +
+                unendingSwarm1 + unendingSwarm2
+            );
+
+            // Display the result
+            document.getElementById('damageResult').textContent = `Total Damage: ${totalDamage}`;
+        }
+    </script>
+</body>
+</html>
