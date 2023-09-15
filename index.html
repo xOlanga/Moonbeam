@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
     <title>Damage Calculator</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    
+    <style>
+        /* Center header and explanation */
+        .centered-content {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 600px; /* Adjust the max-width as needed */
+        }
+
+        /* Add some spacing to the explanation */
+        .explanation {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="centered-content">
+        <h1>Moonbeam Druid Damage Calculator</h1>
+        <p>Enter card costs, available mana, extra mana, spell damage minions lost, and enemy hero's HP. Click "Calculate" for max damage and card order.</p>
+    </div>
     
     <form id="damageCalculator">
+        
         <div class="column">
             <label for="manaAvailable">Mana Available:</label>
             <input type="number" id="manaAvailable">
 
-            <label for="extraMana">Extra Mana:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <label for="extraMana">Extra Mana:</label>
             <input type="number" id="extraMana">
 
-            <label for="minionsDead">Minions Dead:&nbsp&nbsp</label>
+            <label for="minionsDead">Minions Dead:</label>
             <input type="number" id="minionsDead">
 
-            <label for="enemyHP">Enemy HP:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <label for="enemyHP">Enemy HP:</label>
             <input type="number" id="enemyHP">
         </div>
 
